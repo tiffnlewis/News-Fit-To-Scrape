@@ -1,0 +1,29 @@
+{
+  "name": "news-fit-to-scrape",
+  "version": "1.0.0",
+  "description": "News scraper site that allows users to comment on stories.",
+  "main": "routes.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tiffnlewis/News-Fit-To-Scrape.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tiffnlewis/News-Fit-To-Scrape/issues"
+  },
+  "homepage": "https://github.com/tiffnlewis/News-Fit-To-Scrape#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cheerio": "^1.0.0-rc.3",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "mongoose": "^5.5.0",
+    "mongoose-create-unique": "^0.4.4",
+    "request": "^2.88.0"
+  }
+}

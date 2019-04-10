@@ -1,0 +1,11 @@
+<div class="col-xs-12">
+    <div class="card-columns">
+        {{#each articles}}
+            {{> article-card}}
+        {{/each}}
+    </div>
+</div>
+
+<script>
+    $('#favorites').html("All Articles").attr('href', '/').removeClass('disabled').addClass("displayed")
+</script>

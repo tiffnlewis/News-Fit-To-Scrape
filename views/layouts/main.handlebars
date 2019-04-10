@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">	
+	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.1/materia/bootstrap.min.css" rel="stylesheet" integrity="sha384-B7n8QuRe6UtnoLRAwGkku55zwnr4h8whf+ThXUwwlP9SaeNzHlGR4cOOuEZVMYOL" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<script src="/assets/js/app.js"></script>
+    <link rel="stylesheet" href="/assets/css/style.css"  type="text/css" />
+    <title>BubbleBurst</title>
+</head>
+
+<body>
+<div class="container-fluid">
+    <div class="jumbotron">
+        <center>
+        <h1>Pendulum Swing News</h1>
+        <h3>Find out what happens on the other side of the pendulum when it comes to your political leanings.</h3>
+        <a href="#" class="btn btn-primary m-2" id="user">Sign In/Up</a>
+        <a href="#" class="btn btn-primary m-2 disabled" id="favorites">Favorites</a>
+        <h5>Political Commentary from the leading Left, Libertarian, and Right Publications</h5>
+        </center>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row" id="results">
+        {{{ body }}}
+    </div>
+</div>
+
+<div id="user-modal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Sign In or Sign Up</h4>
+            </div>
+            <div class="modal-body">
+                <h3>Enter a username to sign-in or sign-up</h3>
+                <p>And then use your username to save favorites and comment!</p>
+                <form>
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input id="username" class="form-control" type="text">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" id="submitUser" data-dismiss="modal">Sign In/Up</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="comment-modal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Article Notes</h4>
+            </div>
+            <div class="modal-body">
+                <table class="table table-borderless">
+                    <tbody id="comment-body"></tbody>
+                </table>
+                <form>
+                    <div class="form-group">
+                        <label for="user-comment">Add a Comment:</label>
+                        <textarea id="user-comment" class="form-control" rows="5"></textarea>
+                    </div>
+                    <button class="btn btn-default" id="submitComment">Submit Comment</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
