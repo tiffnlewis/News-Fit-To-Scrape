@@ -134,7 +134,7 @@ app.get('/', function(req, res){
                     let title = $(element).find('h4.post-list-article__title').text()
                     let link = $(element).find('h4.post-list-article__title').children().attr("href")
                     let byline = $(element).find('div.post-list-article__entry').text()
-                    let img = $(element).find('img').attr("src")
+                    let img = $(element).find('img').attr("data-src")
                     let author = $(element).find('a.author').text()
                     let article = {
                         title: title,
@@ -145,7 +145,8 @@ app.get('/', function(req, res){
                         source: "National Review"
                     }
 
-                  natReview.push(article)
+                  natReview.push(article);
+                  console.log(article)
 
                 })
 
